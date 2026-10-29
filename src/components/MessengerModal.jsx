@@ -27,7 +27,7 @@ const RESPONSES = {
   education: `Karan is pursuing **B.Tech in Computer Science & Engineering** at **DRIEMS University** (2022–2026) with an outstanding **8.28 CGPA**. He completed Intermediate Science at Ravenshaw Higher Secondary School (64.8%) and Matriculation at Guru Nanak Public School (88.6%).`,
 
   contact: `You can reach Karan directly via:
-• **Email**: karanmahalik88@gmail.com
+• **Email**: karanmahalik2004@gmail.com
 • **Phone**: +91 7205794556
 • **LinkedIn**: linkedin.com/in/karan-mahalik-122438369
 • **GitHub**: github.com/karan-mahalik
