@@ -65,7 +65,7 @@ export default function Contact() {
                     href="mailto:karanmahalik88@gmail.com"
                     className="text-sm font-mono text-white font-semibold hover:text-[#00f5ff] transition break-all"
                   >
-                    karanmahalik88@gmail.com
+                    karanmahalik2004@gmail.com
                   </a>
                 </div>
               </div>
