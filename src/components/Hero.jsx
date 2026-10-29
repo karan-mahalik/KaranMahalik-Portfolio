@@ -75,7 +75,7 @@ export default function Hero({ onOpenMessenger }) {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-heading font-black text-4xl sm:text-6xl md:text-7xl lg:text-7xl tracking-tight text-white mb-4 leading-[1.1]"
         >
-          Turning Raw <span className="text-gradient">Data.</span>
+          turning raw <span className="text-gradient">data.</span>
           <br />
           into verified <span className="text-gradient-purple">decisions.</span>
         </motion.h1>
