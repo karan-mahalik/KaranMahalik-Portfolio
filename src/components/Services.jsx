@@ -75,7 +75,7 @@ export default function Services() {
             <span>Section 08 // Services & Solutions</span>
           </div>
           <h2 className="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight">
-            what i deliver<span className="text-[#00f5ff]">.</span> business value
+            What I Deliver<span className="text-[#00f5ff]">.</span> Business Value
             <span className="text-[#8b5cf6]">.</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl font-sans">
