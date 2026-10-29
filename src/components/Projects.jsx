@@ -101,7 +101,7 @@ export default function Projects() {
               <span>Section 03 // Portfolio Projects</span>
             </div>
             <h2 className="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight">
-              featured data projects<span className="text-[#00f5ff]">.</span>
+              Featured Data Projects<span className="text-[#00f5ff]">.</span>
             </h2>
             <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-xl font-sans">
               Production-grade data pipelines, SQL-driven analytics, and interactive Power BI reports with measurable outcomes.
