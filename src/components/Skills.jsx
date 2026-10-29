@@ -123,7 +123,7 @@ export default function Skills() {
             <span>Section 05 // Technical Proficiency Grid</span>
           </div>
           <h2 className="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight">
-            tools<span className="text-[#00f5ff]">.</span> languages<span className="text-[#8b5cf6]">.</span> architectures
+            tools<span className="text-[#00f5ff]">.</span> Languages<span className="text-[#8b5cf6]">.</span> Architectures
             <span className="text-[#10b981]">.</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl font-sans">
