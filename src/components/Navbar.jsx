@@ -54,11 +54,11 @@ export default function Navbar({ onOpenMessenger }) {
 
             <div className="flex flex-col">
               <span className="font-heading font-bold text-base sm:text-lg text-white tracking-tight flex items-center">
-                karan mahalik<span className="text-[#00f5ff]">.</span>
+                Karan Mahalik<span className="text-[#00f5ff]">.</span>
               </span>
               <span className="text-[10px] text-slate-400 font-mono tracking-wider flex items-center gap-1.5 uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#10b981]" />
-                open to work · data & bi
+                Open to Work · Data & Bi
               </span>
             </div>
           </Link>
