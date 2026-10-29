@@ -23,14 +23,14 @@ function App() {
       <main>
         <Hero onOpenMessenger={() => setMessengerOpen(true)} />
         <Highlights />
-        <Projects />
-        <Experience />
-        <Skills />
-        <About />
-        <Certifications />
-        <Services />
-        <SkillLab />
-        <Contact />
+        <div className="section-deferred"><Projects /></div>
+        <div className="section-deferred"><Experience /></div>
+        <div className="section-deferred"><Skills /></div>
+        <div className="section-deferred"><About /></div>
+        <div className="section-deferred"><Certifications /></div>
+        <div className="section-deferred"><Services /></div>
+        <div className="section-deferred"><SkillLab /></div>
+        <div className="section-deferred"><Contact /></div>
       </main>
 
       <Footer />

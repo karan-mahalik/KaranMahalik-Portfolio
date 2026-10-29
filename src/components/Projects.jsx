@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
-import { HiSparkles, HiChevronDown, HiChevronUp, HiOutlineChartBar } from 'react-icons/hi2'
+import { FaGithub } from 'react-icons/fa'
+import { HiSparkles, HiChevronDown, HiChevronUp } from 'react-icons/hi2'
 
 const projects = [
   {

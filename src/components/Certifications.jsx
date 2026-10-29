@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { HiCheckBadge, HiArrowTopRightOnSquare } from 'react-icons/hi2'
+import { HiCheckBadge } from 'react-icons/hi2'
 import { FaDatabase, FaPython } from 'react-icons/fa'
 import { BsFillBarChartFill, BsFileEarmarkExcelFill } from 'react-icons/bs'
 

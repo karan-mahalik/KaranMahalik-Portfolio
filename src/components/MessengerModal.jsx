@@ -34,6 +34,8 @@ const RESPONSES = {
 • **Location**: Cuttack, Odisha, India`,
 }
 
+let messageIdCounter = 2
+
 export default function MessengerModal({ isOpen, onClose }) {
   const [messages, setMessages] = useState([
     {
@@ -50,11 +52,21 @@ export default function MessengerModal({ isOpen, onClose }) {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, isTyping])
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose()
+    }
+    if (isOpen) {
+      window.addEventListener('keydown', handleKeyDown)
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, onClose])
+
   const handleSend = (textToSend) => {
     const query = (textToSend || input).trim()
     if (!query) return
 
-    const userMsg = { id: Date.now(), sender: 'user', text: query }
+    const userMsg = { id: ++messageIdCounter, sender: 'user', text: query }
     setMessages((prev) => [...prev, userMsg])
     setInput('')
     setIsTyping(true)
@@ -77,7 +89,7 @@ export default function MessengerModal({ isOpen, onClose }) {
         replyText = `Thanks for asking! Karan is a passionate Data Analyst & Power BI Developer with strong SQL and business reporting skills. You can ask me about his **projects**, **skills**, **education**, or **availability**, or drop an email directly at **karanmahalik88@gmail.com**!`
       }
 
-      setMessages((prev) => [...prev, { id: Date.now() + 1, sender: 'bot', text: replyText }])
+      setMessages((prev) => [...prev, { id: ++messageIdCounter, sender: 'bot', text: replyText }])
       setIsTyping(false)
     }, 600)
   }
@@ -86,8 +98,12 @@ export default function MessengerModal({ isOpen, onClose }) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+      <div
+        onClick={onClose}
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+      >
         <motion.div
+          onClick={(e) => e.stopPropagation()}
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -113,6 +129,7 @@ export default function MessengerModal({ isOpen, onClose }) {
             </div>
             <button
               onClick={onClose}
+              aria-label="Close Assistant"
               className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition"
             >
               <HiXMark className="w-5 h-5" />
@@ -194,6 +211,7 @@ export default function MessengerModal({ isOpen, onClose }) {
             <button
               type="submit"
               disabled={!input.trim()}
+              aria-label="Send message"
               className="p-2.5 rounded-xl btn-primary disabled:opacity-40 disabled:cursor-not-allowed text-[#050816]"
             >
               <HiPaperAirplane className="w-5 h-5" />

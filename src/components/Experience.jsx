@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
-import { HiBriefcase, HiCalendar, HiMapPin, HiCheckCircle } from 'react-icons/hi2'
-import { SiReact, SiSpringboot, SiMysql, SiPostman } from 'react-icons/si'
+import { HiBriefcase, HiCalendar } from 'react-icons/hi2'
 
 const experiences = [
   {

@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import {
   HiEnvelope,
   HiPhone,
@@ -7,7 +6,6 @@ import {
   HiPaperAirplane,
   HiClipboardDocument,
   HiCheck,
-  HiChatBubbleBottomCenterText,
 } from 'react-icons/hi2'
 import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 
@@ -75,6 +73,7 @@ export default function Contact() {
                 onClick={handleCopyEmail}
                 className="p-2.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition"
                 title="Copy Email"
+                aria-label="Copy email address to clipboard"
               >
                 {copiedEmail ? <HiCheck className="w-4 h-4 text-[#10b981]" /> : <HiClipboardDocument className="w-4 h-4" />}
               </button>

@@ -171,4 +171,49 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0, 245, 255, 0.2);
   }
+
+  .section-deferred {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 600px;
+  }
+
+  @keyframes float-badge-1 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(6px, -12px, 0); }
+  }
+
+  @keyframes float-badge-2 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-8px, 14px, 0); }
+  }
+
+  @keyframes float-badge-3 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-6px, -10px, 0); }
+  }
+
+  @keyframes float-badge-4 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(8px, 12px, 0); }
+  }
+
+  .animate-float-1 {
+    animation: float-badge-1 7s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .animate-float-2 {
+    animation: float-badge-2 8s ease-in-out infinite 1s;
+    will-change: transform;
+  }
+
+  .animate-float-3 {
+    animation: float-badge-3 6.5s ease-in-out infinite 2s;
+    will-change: transform;
+  }
+
+  .animate-float-4 {
+    animation: float-badge-4 7.5s ease-in-out infinite 1.5s;
+    will-change: transform;
+  }
 }

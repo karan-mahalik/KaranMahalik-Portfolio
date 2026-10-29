@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import { Link } from 'react-scroll'
-import { FaGithub, FaLinkedin, FaWhatsapp, FaDatabase, FaPython } from 'react-icons/fa'
+import { FaWhatsapp, FaDatabase, FaPython } from 'react-icons/fa'
 import { HiChatBubbleLeftRight, HiArrowTrendingUp, HiSparkles } from 'react-icons/hi2'
 import { BsFillBarChartFill, BsFileEarmarkExcelFill } from 'react-icons/bs'
 
@@ -18,53 +18,37 @@ export default function Hero({ onOpenMessenger }) {
       <div className="absolute inset-0 bg-grid opacity-30 pointer-events-none" />
 
       {/* Floating Badges (Desktop) */}
-      <motion.div
-        animate={{ y: [0, -12, 0], x: [0, 6, 0] }}
-        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
-        className="hidden lg:flex absolute top-32 left-10 xl:left-24 items-center gap-2.5 px-3.5 py-2 rounded-xl glass border border-[#00f5ff]/20 shadow-lg shadow-[#00f5ff]/5 z-20 pointer-events-none"
-      >
+      <div className="hidden lg:flex absolute top-32 left-10 xl:left-24 items-center gap-2.5 px-3.5 py-2 rounded-xl glass border border-[#00f5ff]/20 shadow-lg shadow-[#00f5ff]/5 z-20 pointer-events-none animate-float-1">
         <div className="w-2.5 h-2.5 rounded-full bg-[#00f5ff] animate-ping" />
         <div className="flex flex-col">
           <span className="text-xs font-bold text-white font-mono">Karan Mahalik</span>
           <span className="text-[10px] text-[#00f5ff] font-mono">Data Analyst & SQL Dev</span>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        animate={{ y: [0, 14, 0], x: [0, -8, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-        className="hidden lg:flex absolute top-36 right-10 xl:right-24 items-center gap-2.5 px-3.5 py-2 rounded-xl glass border border-[#f59e0b]/20 shadow-lg shadow-[#f59e0b]/5 z-20 pointer-events-none"
-      >
+      <div className="hidden lg:flex absolute top-36 right-10 xl:right-24 items-center gap-2.5 px-3.5 py-2 rounded-xl glass border border-[#f59e0b]/20 shadow-lg shadow-[#f59e0b]/5 z-20 pointer-events-none animate-float-2">
         <BsFillBarChartFill className="w-5 h-5 text-[#f59e0b]" />
         <div className="flex flex-col">
           <span className="text-xs font-bold text-white font-mono">DAX & Modeling</span>
           <span className="text-[10px] text-[#f59e0b] font-mono">Power BI Reports</span>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        animate={{ y: [0, -10, 0], x: [0, -6, 0] }}
-        transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-        className="hidden lg:flex absolute bottom-28 left-8 xl:left-28 items-center gap-2.5 px-3.5 py-2 rounded-xl glass border border-[#10b981]/20 shadow-lg shadow-[#10b981]/5 z-20 pointer-events-none"
-      >
+      <div className="hidden lg:flex absolute bottom-28 left-8 xl:left-28 items-center gap-2.5 px-3.5 py-2 rounded-xl glass border border-[#10b981]/20 shadow-lg shadow-[#10b981]/5 z-20 pointer-events-none animate-float-3">
         <FaDatabase className="w-5 h-5 text-[#10b981]" />
         <div className="flex flex-col">
           <span className="text-xs font-bold text-white font-mono">T-SQL & Views</span>
           <span className="text-[10px] text-[#10b981] font-mono">48K+ Records Analyzed</span>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        animate={{ y: [0, 12, 0], x: [0, 8, 0] }}
-        transition={{ duration: 7.5, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-        className="hidden lg:flex absolute bottom-32 right-8 xl:right-28 items-center gap-2.5 px-3.5 py-2 rounded-xl glass border border-[#8b5cf6]/20 shadow-lg shadow-[#8b5cf6]/5 z-20 pointer-events-none"
-      >
+      <div className="hidden lg:flex absolute bottom-32 right-8 xl:right-28 items-center gap-2.5 px-3.5 py-2 rounded-xl glass border border-[#8b5cf6]/20 shadow-lg shadow-[#8b5cf6]/5 z-20 pointer-events-none animate-float-4">
         <HiArrowTrendingUp className="w-5 h-5 text-[#8b5cf6]" />
         <div className="flex flex-col">
           <span className="text-xs font-bold text-white font-mono">Academic CGPA</span>
           <span className="text-[10px] text-[#8b5cf6] font-mono">8.28 · DRIEMS Univ</span>
         </div>
-      </motion.div>
+      </div>
 
       {/* Main Container */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center">
@@ -218,11 +202,15 @@ export default function Hero({ onOpenMessenger }) {
           transition={{ duration: 0.5, delay: 0.45 }}
           className="flex flex-wrap items-center justify-center gap-3.5 mb-10"
         >
-          <Link to="projects" smooth duration={500} offset={-75}>
-            <button className="btn-primary px-7 py-3 rounded-full text-sm font-heading font-bold shadow-lg shadow-[#00f5ff]/20 flex items-center gap-2">
-              <HiSparkles className="w-4 h-4" />
-              Explore Projects
-            </button>
+          <Link
+            to="projects"
+            smooth
+            duration={500}
+            offset={-75}
+            className="btn-primary px-7 py-3 rounded-full text-sm font-heading font-bold shadow-lg shadow-[#00f5ff]/20 inline-flex items-center gap-2 cursor-pointer"
+          >
+            <HiSparkles className="w-4 h-4" />
+            Explore Projects
           </Link>
 
           <button

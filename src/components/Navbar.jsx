@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-scroll'
-import { HiBars3, HiXMark, HiChatBubbleLeftRight, HiArrowDownTray } from 'react-icons/hi2'
+import { HiBars3, HiXMark, HiChatBubbleLeftRight } from 'react-icons/hi2'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const navLinks = [
@@ -22,7 +22,7 @@ export default function Navbar({ onOpenMessenger }) {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 25)
-    window.addEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
@@ -113,11 +113,11 @@ export default function Navbar({ onOpenMessenger }) {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex xl:hidden items-center gap-2">
             <button
               onClick={onOpenMessenger}
               className="p-2 rounded-lg bg-[#00f5ff]/10 text-[#00f5ff] border border-[#00f5ff]/30"
-              aria-label="Chat"
+              aria-label="Chat with Karan"
             >
               <HiChatBubbleLeftRight className="w-5 h-5" />
             </button>
@@ -126,6 +126,7 @@ export default function Navbar({ onOpenMessenger }) {
               onClick={() => setMobileOpen(!mobileOpen)}
               className="p-2 rounded-lg text-slate-300 hover:text-white bg-white/5 border border-white/10"
               aria-label="Toggle Navigation"
+              aria-expanded={mobileOpen}
             >
               {mobileOpen ? <HiXMark className="w-6 h-6" /> : <HiBars3 className="w-6 h-6" />}
             </button>

@@ -1,6 +1,8 @@
 import { Link } from 'react-scroll'
-import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
-import { HiEnvelope, HiHeart } from 'react-icons/hi2'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { HiEnvelope } from 'react-icons/hi2'
+
+const CURRENT_YEAR = new Date().getFullYear()
 
 export default function Footer() {
   return (
@@ -87,7 +89,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-slate-500 gap-2">
           <div>
-            © {new Date().getFullYear()} Karan Mahalik. All rights reserved. Built with React & Tailwind CSS.
+            © {CURRENT_YEAR} Karan Mahalik. All rights reserved. Built with React & Tailwind CSS.
           </div>
           <div className="flex items-center gap-2">
             <span>Designed for precision & analytical impact</span>

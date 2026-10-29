@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   HiSparkles,
-  HiClock,
   HiCheckCircle,
   HiXCircle,
   HiArrowPath,
@@ -159,13 +158,23 @@ export default function SkillLab() {
   const activeQuestions = quizData[activeSub] || []
   const currentQ = activeQuestions[currentIdx]
 
-  useEffect(() => {
+  const switchSubject = (subId) => {
+    setActiveSub(subId)
     setCurrentIdx(0)
     setSelectedOpt(null)
     setShowAnswer(false)
     setScore(0)
     setIsFinished(false)
-  }, [activeSub, mode])
+  }
+
+  const switchMode = (newMode) => {
+    setMode(newMode)
+    setCurrentIdx(0)
+    setSelectedOpt(null)
+    setShowAnswer(false)
+    setScore(0)
+    setIsFinished(false)
+  }
 
   const handleSelect = (idx) => {
     if (showAnswer) return
@@ -213,7 +222,7 @@ export default function SkillLab() {
           {/* Mode Switcher */}
           <div className="inline-flex items-center glass p-1.5 rounded-full border border-white/10 mt-6">
             <button
-              onClick={() => setMode('quiz')}
+              onClick={() => switchMode('quiz')}
               className={`px-5 py-2 rounded-full text-xs font-mono font-bold flex items-center gap-2 transition-all ${
                 mode === 'quiz'
                   ? 'bg-gradient-to-r from-[#00f5ff] to-[#8b5cf6] text-[#050816] shadow-md'
@@ -224,7 +233,7 @@ export default function SkillLab() {
               Interactive Quiz
             </button>
             <button
-              onClick={() => setMode('notes')}
+              onClick={() => switchMode('notes')}
               className={`px-5 py-2 rounded-full text-xs font-mono font-bold flex items-center gap-2 transition-all ${
                 mode === 'notes'
                   ? 'bg-gradient-to-r from-[#8b5cf6] to-[#ec4899] text-white shadow-md'
@@ -242,7 +251,7 @@ export default function SkillLab() {
           {subjects.map((sub) => (
             <button
               key={sub.id}
-              onClick={() => setActiveSub(sub.id)}
+              onClick={() => switchSubject(sub.id)}
               className={`px-4 py-2.5 rounded-xl text-xs font-mono font-bold flex items-center gap-2 transition-all border ${
                 activeSub === sub.id
                   ? 'bg-[#0c1020] text-white shadow-lg'
@@ -368,7 +377,13 @@ export default function SkillLab() {
                 <div className="inline-block p-4 rounded-2xl bg-[#0c1020] border border-white/10 mb-6 font-mono text-xs">
                   <span className="text-slate-400">Proficiency Grade: </span>
                   <span className="text-[#10b981] font-extrabold text-base ml-1">
-                    {score === activeQuestions.length ? 'Grade S+ (Mastery)' : score >= 1 ? 'Grade A (Strong)' : 'Grade B'}
+                    {score === activeQuestions.length
+                      ? 'Grade S+ (Mastery)'
+                      : score / activeQuestions.length >= 0.75
+                      ? 'Grade A (Strong)'
+                      : score / activeQuestions.length >= 0.5
+                      ? 'Grade B (Proficient)'
+                      : 'Grade C (Needs Practice)'}
                   </span>
                 </div>
 

@@ -1,14 +1,12 @@
 import { motion } from 'framer-motion'
 import {
   HiAcademicCap,
-  HiUser,
   HiMapPin,
   HiEnvelope,
   HiPhone,
   HiSparkles,
   HiCheckBadge,
 } from 'react-icons/hi2'
-import { FaGraduationCap } from 'react-icons/fa'
 
 const educationList = [
   {
