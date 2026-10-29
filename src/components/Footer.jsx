@@ -23,7 +23,7 @@ export default function Footer() {
                 </div>
               </div>
               <span className="font-heading font-bold text-lg text-white">
-                karan mahalik<span className="text-[#00f5ff]">.</span>
+                Karan Mahalik<span className="text-[#00f5ff]">.</span>
               </span>
             </Link>
             <p className="text-xs text-slate-400 font-mono">
@@ -77,7 +77,7 @@ export default function Footer() {
               <FaLinkedin className="w-4 h-4" />
             </a>
             <a
-              href="mailto:karanmahalik88@gmail.com"
+              href="mailto:karanmahalik2004@gmail.com"
               aria-label="Email"
               className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#10b981] hover:border-[#10b981]/40 transition"
             >
