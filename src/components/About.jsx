@@ -70,8 +70,8 @@ export default function About() {
             <span>Section 06 // Education & Profile</span>
           </div>
           <h2 className="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight">
-            profile<span className="text-[#00f5ff]">.</span> academic foundation
-            <span className="text-[#8b5cf6]">.</span> vision<span className="text-[#10b981]">.</span>
+            profile<span className="text-[#00f5ff]">.</span> Academic Foundation
+            <span className="text-[#8b5cf6]">.</span> Vision<span className="text-[#10b981]">.</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl font-sans">
             A look into academic milestones, engineering rigor, and the analytical mindset driving every dashboard and SQL view.
@@ -113,7 +113,7 @@ export default function About() {
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <HiEnvelope className="w-4 h-4 text-[#8b5cf6] shrink-0" />
-                  <span>karanmahalik88@gmail.com</span>
+                  <span>karanmahalik2004@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-300">
                   <HiPhone className="w-4 h-4 text-[#10b981] shrink-0" />
