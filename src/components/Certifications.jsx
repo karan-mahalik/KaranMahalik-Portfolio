@@ -76,7 +76,7 @@ export default function Certifications() {
             <span>Section 07 // Certifications & Continuous Practice</span>
           </div>
           <h2 className="font-heading font-black text-3xl sm:text-5xl text-white tracking-tight">
-            practical credentials<span className="text-[#00f5ff]">.</span> continuous mastery
+            Practical Credentials<span className="text-[#00f5ff]">.</span> Continuous Mastery
             <span className="text-[#8b5cf6]">.</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl font-sans">
