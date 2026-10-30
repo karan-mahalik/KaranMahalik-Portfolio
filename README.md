@@ -10,7 +10,7 @@
 - **Title:** Data Analyst | SQL Developer | Power BI Developer
 - **Education:** B.Tech in Computer Science & Engineering (2022–2026), DRIEMS University — **CGPA: 8.28**
 - **Location:** Cuttack, Odisha, India (Open to Relocation & Remote)
-- **Email:** [karanmahalik88@gmail.com](mailto:karanmahalik88@gmail.com)
+- **Email:** [karanmahalik88@gmail.com](mailto:karanmahalik2004@gmail.com)
 - **Phone:** [+91 7205794556](tel:+917205794556)
 - **LinkedIn:** [linkedin.com/in/karan-mahalik-122438369](https://linkedin.com/in/karan-mahalik-122438369)
 - **GitHub:** [github.com/karan-mahalik](https://github.com/karan-mahalik)
